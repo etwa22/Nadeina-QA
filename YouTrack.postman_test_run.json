@@ -1,0 +1,209 @@
+{
+	"id": "f082d18c-f608-4c71-8ddc-8fff210cc76b",
+	"name": "YouTrack",
+	"timestamp": "2022-05-03T06:26:41.587Z",
+	"collection_id": "20763708-c9f69b76-6984-4b2d-a1dd-af71359a2ea0",
+	"folder_id": 0,
+	"environment_id": "0",
+	"totalPass": 11,
+	"totalFail": 0,
+	"results": [
+		{
+			"id": "3bddc4fb-bec3-4338-b8bb-227d3bb59e92",
+			"name": "Get Project",
+			"url": "http://89.223.126.182:8080/api/admin/projects?fields=id,name,shortName",
+			"time": 102,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Status code is 200": true,
+				"Set collection enviroment": true
+			},
+			"testPassFailCounts": {
+				"Status code is 200": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Set collection enviroment": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				102
+			],
+			"allTests": [
+				{
+					"Status code is 200": true,
+					"Set collection enviroment": true
+				}
+			]
+		},
+		{
+			"id": "d4ef4d1f-d36b-4c94-80ab-61e1f8b6ad3e",
+			"name": "New Issue",
+			"url": "http://89.223.126.182:8080/api/issues",
+			"time": 200,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"PreRequest": true,
+				"Status code is 200": true,
+				"Set collection enviroment": true
+			},
+			"testPassFailCounts": {
+				"PreRequest": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Status code is 200": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Set collection enviroment": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				200
+			],
+			"allTests": [
+				{
+					"PreRequest": true,
+					"Status code is 200": true,
+					"Set collection enviroment": true
+				}
+			]
+		},
+		{
+			"id": "4b2a2351-7244-48b1-b4dc-04de3709b6d2",
+			"name": "Get Issue",
+			"url": "http://89.223.126.182:8080/api/issues/2-671?fields=$type,id,summary,description,customFields($type,id,projectCustomField($type,id,field($type,id,name)),value($type,avatarUrl,buildLink,color(id),fullName,id,isResolved,localizedName,login,minutes,name,presentation,text))",
+			"time": 86,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Status code is 200": true,
+				"Summary test": true,
+				"Description test": true
+			},
+			"testPassFailCounts": {
+				"Status code is 200": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Summary test": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Description test": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				86
+			],
+			"allTests": [
+				{
+					"Status code is 200": true,
+					"Summary test": true,
+					"Description test": true
+				}
+			]
+		},
+		{
+			"id": "99d9bbd6-2d4f-4d22-bb01-af3840e9e9b5",
+			"name": "Assignee",
+			"url": "http://89.223.126.182:8080/api/issues/2-671?fields=customFields(id,name,value(avatarUrl,buildLink,color(id),fullName,id,isResolved,localizedName,login,minutes,name,presentation,text))",
+			"time": 132,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Status code is 200": true
+			},
+			"testPassFailCounts": {
+				"Status code is 200": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				132
+			],
+			"allTests": [
+				{
+					"Status code is 200": true
+				}
+			]
+		},
+		{
+			"id": "9cba9a36-e7f8-41db-8bda-2a6782706034",
+			"name": "Get field",
+			"url": "http://89.223.126.182:8080/api/issues/2-671?fields=customFields(id,name,value(avatarUrl,buildLink,color(id),fullName,id,isResolved,localizedName,login,minutes,name,presentation,text))",
+			"time": 78,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Status code is 200": true,
+				"Assignee test": true
+			},
+			"testPassFailCounts": {
+				"Status code is 200": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Assignee test": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				78
+			],
+			"allTests": [
+				{
+					"Status code is 200": true,
+					"Assignee test": true
+				}
+			]
+		}
+	],
+	"count": 1,
+	"totalTime": 598,
+	"collection": {
+		"requests": [
+			{
+				"id": "3bddc4fb-bec3-4338-b8bb-227d3bb59e92",
+				"method": "GET"
+			},
+			{
+				"id": "d4ef4d1f-d36b-4c94-80ab-61e1f8b6ad3e",
+				"method": "POST"
+			},
+			{
+				"id": "4b2a2351-7244-48b1-b4dc-04de3709b6d2",
+				"method": "GET"
+			},
+			{
+				"id": "99d9bbd6-2d4f-4d22-bb01-af3840e9e9b5",
+				"method": "POST"
+			},
+			{
+				"id": "9cba9a36-e7f8-41db-8bda-2a6782706034",
+				"method": "GET"
+			}
+		]
+	}
+}
